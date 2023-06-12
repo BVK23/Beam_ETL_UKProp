@@ -18,10 +18,13 @@ The specific combination of attributes serves the following purposes:
 
 3. Similar Property Information: There may be instances where multiple properties share the same PAON, SAON, Street, or any combination of these values. To differentiate between these similar properties, we include all four values along with the first characters of the postcode in the key.
 
----
 
 ## Property ID gen function
 
 The propkeyid_gen() function is employed to generate the property key identifier based on the postcode. This function utilizes a dictionary named dict_post to keep track of the count of properties with the same postcode. The function checks if the postcode exists in the dictionary, updates the count accordingly, and generates a four-digit count, zero-padded if necessary. The postcode and count are then combined to form the property key identifier. We then store the dictionary in a pickle file to later use to generate Property ID  for new properties.
 
 ---
+
+Data Source : https://www.gov.uk/government/statistical-data-sets/price-paid-data-downloads 
+Data Definition : https://www.gov.uk/guidance/about-the-price-paid-data#download-options
+Contains HM Land Registry data © Crown copyright and database right 2021. This data is licensed under the Open Government Licence v3.0.
