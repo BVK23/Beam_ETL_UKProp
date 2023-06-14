@@ -15,11 +15,11 @@ password = urllib.parse.quote_plus("YOUR_PASSWORD")
 connection_uri = f"mongodb+srv://{username}:{password}@clustervk.ofeimsy.mongodb.net/"
 
 options_aws = pipeline_options.S3Options([
-               "--s3_region_name=eu-west-2",
-                "--s3_access_key_id=AKIAQ76BX2HNGZIGRM5G",
-                "--s3_secret_access_key=eTLWcejJ5oZzDuaG51B3YWDKKYzG0/WQu8jHXFlL"
+                "--s3_region_name=<your_region>",
+                "--s3_access_key_id=<your_key_id>",
+                "--s3_secret_access_key=<your_key>"
             ])
-# Pipeline options to connect to S3 bucket and Extract csv data
+ #Pipeline options to connect to S3 bucket and Extract csv data 
 
 pickle_file_path = '../MongoDB_proj/postcode_dictionary.pkl' 
 with open(pickle_file_path, 'rb') as f:
