@@ -1,16 +1,20 @@
-# ETL 1
+# ETL 2
 
-## [uk_property_data_etl.py](https://github.com/BVK23/Beam_ETL_UKProp/blob/main/ETL%202/sequential_pipeline.py)
-This file contains the local test implementation of an ETL process for storing historical data of HM Land Registry Price Paid Data for the Birmingham District.
+## [sequential_pipeline.py](https://github.com/BVK23/Beam_ETL_UKProp/blob/main/ETL%202/sequential_pipeline.py)
 
-The updates mentioned are derived from the first version, i.e., the [colab notebook](https://github.com/BVK23/Beam_ETL_UKProp/blob/main/Apache_Beam_ETL_Pipeline_UK_Property_Data.ipynb).
+This file contains the local test implementation of an ETL process for ingesting new monthly data of HM Land Registry Price Paid Data for the Birmingham District.
 
-Also, all code is modified to run locally for test purposes. The `WriteToMongoDB` transform and reading data from a CSV stored on S3 are not included. Please check the colab notebook for the usage of those transforms.
+Most of the functions are similar to ETL 1 due to nature of the data and our processing logic. Some have been changed slightly to accomodate our implementation of the pipeline.
 
-### Update 1
-1. Property ID dictionary storage using [Pickle]().
-2. Pipeline runner options.
-3. Refactor code: Use of Composite Transforms.
+The new month data is slightly different from the historical pp-complete.csv data 
+
+{F87E72FA-026A-176C-E053-6B04A8C0D2BE},160000,2023-02-09 00:00,"B1 2LJ","F","N","L","CUTLASS COURT, 30","APARTMENT 121","GRANVILLE STREET","","BIRMINGHAM","BIRMINGHAM","WEST MIDLANDS","B","A" 
+
+Historical data : 
+
+"{DBA933FA-5665-669D-E053-6B04A8C0AD56}","232999","2022-01-27 00:00","HU15 1FT","F","N","L","FAIRWAY VIEW","APARTMENT 27","ELLOUGHTON ROAD","","BROUGH","EAST RIDING OF YORKSHIRE","EAST RIDING OF YORKSHIRE","A","A"
+
+So the parse_csv_line function is modified to accomodate that.
 
 <!--  ### Update 2 -->
 
