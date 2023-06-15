@@ -8,9 +8,10 @@ The updates mentioned are derived from the first version, i.e., the [colab noteb
 Also, all code is modified to run locally for test purposes. The `WriteToMongoDB` transform and reading data from a CSV stored on S3 are not included. Please check the colab notebook for the usage of those transforms.
 
 ### Update 1
-1. Property ID dictionary storage using [Pickle]().
+1. Property ID dictionary storage using [Pickle](https://github.com/BVK23/Beam_ETL_UKProp/blob/main/ETL%201/uk_property_data_etl.py#L221).
 2. Pipeline runner options.
-3. Refactor code: Use of Composite Transforms.
+3. Refactor code: Use of [Composite Transforms](https://github.com/BVK23/Beam_ETL_UKProp/blob/main/ETL%201/uk_property_data_etl.py#L179). 
+More on Composite Transform [here](https://www.linkedin.com/feed/update/urn:li:activity:7074415159854669824/) and [here](https://beam.apache.org/documentation/programming-guide/#composite-transforms). 
 
 <!--  ### Update 2 -->
 
