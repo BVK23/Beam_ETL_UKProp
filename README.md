@@ -2,9 +2,19 @@
 
 Repository for Apache Beam ETL project on HM Land Registry Price Paid Data.
 
+## [ETL 1](https://github.com/BVK23/Beam_ETL_UKProp/tree/main/ETL%201)
+
+Pipeline to transform and load Historical [Price Paid data](https://www.gov.uk/government/statistical-data-sets/price-paid-data-downloads#single-file)
+
 Full pipeline code available in the [Collab Notebook](https://colab.research.google.com/drive/164hv_14QChqeqKgc2arvwBYgOYWamaf6).
 
-Link to the related [Medium Article](https://medium.com/@varunkrishna97/building-a-scalable-big-data-etl-pipeline-apache-beam-python-sdk-with-mongodb-and-s3-i-o-ab334edc9999).
+Link to Building a Scalable Big Data ETL Pipeline I [Medium Article](https://medium.com/@varunkrishna97/building-a-scalable-big-data-etl-pipeline-apache-beam-python-sdk-with-mongodb-and-s3-i-o-ab334edc9999).
+
+## [ETL 2](https://github.com/BVK23/Beam_ETL_UKProp/tree/main/ETL%202)
+
+Pipeline to ingest new [monthly data](https://www.gov.uk/government/statistical-data-sets/price-paid-data-downloads#april-2023-data-current-month)
+
+Link to Building a Scalable Big Data ETL Pipeline II, [medium article](https://medium.com/@varunkrishna97/building-a-scalable-big-data-etl-pipeline-ii-apache-beam-python-sdk-with-mongodb-and-s3-i-o-59468a082e8b).
 
 ## Data Aggregation Logic
 
