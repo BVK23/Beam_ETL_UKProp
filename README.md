@@ -4,7 +4,7 @@ Repository for Apache Beam ETL project on HM Land Registry Price Paid Data.
 
 ## [ETL 1](https://github.com/BVK23/Beam_ETL_UKProp/tree/main/ETL%201)
 
-Pipeline to transform and load Historical [Price Paid data](https://www.gov.uk/government/statistical-data-sets/price-paid-data-downloads#single-file)
+Pipeline to transform and load Historical [Price Paid data](https://www.gov.uk/government/statistical-data-sets/price-paid-data-downloads#single-file) in MongoDB Database.
 
 Full pipeline code available in the [Collab Notebook](https://colab.research.google.com/drive/164hv_14QChqeqKgc2arvwBYgOYWamaf6).
 
@@ -34,6 +34,11 @@ The specific combination of attributes serves the following purposes:
 ## Property ID gen function
 
 The propkeyid_gen() function is employed to generate the property key identifier based on the postcode. This function utilizes a dictionary named dict_post to keep track of the count of properties with the same postcode. The function checks if the postcode exists in the dictionary, updates the count accordingly, and generates a four-digit count, zero-padded if necessary. The postcode and count are then combined to form the property key identifier. We then store the dictionary in a pickle file to later use to generate Property ID  for new properties.
+
+### Document Structure on MongoDB Atlas
+
+![Image_of_Document_Struct](https://github.com/BVK23/Beam_ETL_UKProp/blob/main/ETL%201/MongoDB_coll_ilust.png)
+
 
 ---
 
