@@ -1,6 +1,6 @@
 # ETL 1
 
-## [uk_property_data_etl.py](https://github.com/BVK23/Beam_ETL_UKProp/blob/main/ETL%202/sequential_pipeline.py)
+## [uk_property_data_etl.py](https://github.com/BVK23/Beam_ETL_UKProp/blob/main/ETL%201/uk_property_data_etl.py)
 This file contains the local test implementation of an ETL process for storing historical data of HM Land Registry Price Paid Data for the Birmingham District.
 
 The updates mentioned are derived from the first version, i.e., the [colab notebook](https://github.com/BVK23/Beam_ETL_UKProp/blob/main/Apache_Beam_ETL_Pipeline_UK_Property_Data.ipynb).
