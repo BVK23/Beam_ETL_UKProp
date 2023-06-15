@@ -112,7 +112,7 @@ class FormatInfo(beam.DoFn):
             }
             yield property_data
         else:
-            property_id = data[1]["propid_tuples"][-1]
+            property_id = data[1]["prop_ids"][-1]
            
         transaction_data = []
         for transaction in data[1]["transactions"]:
@@ -170,13 +170,13 @@ def main():
         )
       
         combined_data = (
-                {'transactions': tuple_collection, 'propid_tuples': prop_collection}
+                {'transactions': tuple_collection, 'prop_ids': prop_collection}
                 | "Combine Data" >> beam.CoGroupByKey()
                 |beam.Filter(lambda x :  len(x[1]["transactions"])>0)
         )
         
         prop_w_key = (combined_data  
-            |beam.Filter(lambda x :  len(x[1]["propid_tuples"])>0)
+            |beam.Filter(lambda x :  len(x[1]["prop_ids"])>0)
             | 'Formating prop_w_key Data' >> beam.ParDo(FormatInfo(False))
             | 'prop_w_key Data store' >> WriteToMongoDB(uri=connection_uri, db="propertyuk", coll="bham_tran")
 
@@ -184,7 +184,7 @@ def main():
 
         prop_wo_key = ( 
             combined_data  
-            |beam.Filter(lambda x :  len(x[1]["propid_tuples"])==0)
+            |beam.Filter(lambda x :  len(x[1]["prop_ids"])==0)
             | 'Formating prop_wo_key Data' >> beam.ParDo(FormatInfo(True))
         )
         
