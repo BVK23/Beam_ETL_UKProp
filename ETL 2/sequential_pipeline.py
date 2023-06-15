@@ -179,7 +179,6 @@ def main():
             |beam.Filter(lambda x :  len(x[1]["prop_ids"])>0)
             | 'Formating prop_w_key Data' >> beam.ParDo(FormatInfo(False))
             | 'prop_w_key Data store' >> WriteToMongoDB(uri=connection_uri, db="propertyuk", coll="bham_tran")
-
         )
 
         prop_wo_key = ( 
