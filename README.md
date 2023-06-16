@@ -2,6 +2,8 @@
 
 Repository for Apache Beam ETL project on HM Land Registry Price Paid Data.
 
+The HM Land Registry Price Paid Data set is a valuable resource containing comprehensive information about property transactions in the United Kingdom. Analyzing this dataset can offer insights into real estate trends, market dynamics, and property valuation. However, working with big data sets like this requires an efficient and scalable ETL (Extract, Transform, Load) pipeline.
+
 ## [ETL 1](https://github.com/BVK23/Beam_ETL_UKProp/tree/main/ETL%201)
 
 Pipeline to transform and load Historical [Price Paid data](https://www.gov.uk/government/statistical-data-sets/price-paid-data-downloads#single-file) in MongoDB Database.
