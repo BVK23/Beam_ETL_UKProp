@@ -10,8 +10,8 @@ from apache_beam.options.pipeline_options import PipelineOptions, S3Options, Goo
 import ast
 
 
-username = urllib.parse.quote_plus("BVK97")
-password = urllib.parse.quote_plus("Spiderman@1997")
+username = urllib.parse.quote_plus("USERNAME")
+password = urllib.parse.quote_plus("PASSWORD")
 
 # Create the connection URI with the encoded username and password
 connection_uri = f"mongodb+srv://{username}:{password}@clustervk.ofeimsy.mongodb.net/"
@@ -148,12 +148,12 @@ def main():
     options = PipelineOptions()
 
     options_aws = options.view_as(S3Options)
-    options_aws.s3_region_name = 'eu-west-2'  # Replace with your desired AWS region
-    options_aws.s3_access_key_id = 'AKIAQ76BX2HNMVPDHWZQ'  # Replace with your AWS access key ID
-    options_aws.s3_secret_access_key = '3UKrzFUOwKzTQJxbzQCdc4jKZzSbpWhEyB/tAlG8' 
+    options_aws.s3_region_name = 'Your_S3_Region'  # Replace with your desired AWS region
+    options_aws.s3_access_key_id = 'Your_Key_Id'  # Replace with your AWS access key ID
+    options_aws.s3_secret_access_key = 'Your_Key' 
     
     google_cloud_options = options.view_as(GoogleCloudOptions)
-    google_cloud_options.project = 'abeam-386113'  # Replace with your actual project ID
+    google_cloud_options.project = 'Your_Project_Id'  # Replace with your actual project ID
     google_cloud_options.job_name = 'etl2build1p1'  # Replace with your desired job name
     google_cloud_options.staging_location = 'gs://uk_property_registration/ETL2/stage_fold'  # Replace with your GCS staging bucket
     google_cloud_options.temp_location = 'gs://uk_property_registration/ETL2/temp_fold'  # Replace with your GCS temp bucket
@@ -163,7 +163,7 @@ def main():
         # Read the new data; transaction-level
         transactions = (
                 pipeline1
-                | 'Read Transaction Data' >> beam.io.ReadFromText("s3://bvkawsbucket/pp-monthly-update_april_2023.txt")
+                | 'Read Transaction Data' >> beam.io.ReadFromText("s3://your_bucket_name/pp-monthly-update_april_2023.txt")
                 | 'Parse CSV Lines' >> beam.Map(parse_csv_line)
                 | 'ETL for a subset' >>beam.Filter(lambda x: x[12] == 'BIRMINGHAM')
                       )
@@ -191,7 +191,7 @@ def main():
     options2 = PipelineOptions()
 
     google_cloud_options2 = options2.view_as(GoogleCloudOptions)
-    google_cloud_options2.project = 'abeam-386113'  # Replace with your actual project ID
+    google_cloud_options2.project = 'Your_Project_Id'  # Replace with your actual project ID
     google_cloud_options2.job_name = 'etl2build1p2'  # Replace with your desired job name
     google_cloud_options2.staging_location = 'gs://uk_property_registration/ETL2/stage_fold'  # Replace with your GCS staging bucket
     google_cloud_options2.temp_location = 'gs://uk_property_registration/ETL2/temp_fold'
