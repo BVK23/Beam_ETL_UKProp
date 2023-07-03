@@ -1,0 +1,5 @@
+boto3==1.26.90
+firebase_admin==6.1.0
+gcsfs
+# Add other dependencies here
+
