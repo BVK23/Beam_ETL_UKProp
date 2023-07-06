@@ -13,6 +13,9 @@ Also, all code is modified to run locally for test purposes. The `WriteToMongoDB
 3. Refactor code: Use of [Composite Transforms](https://github.com/BVK23/Beam_ETL_UKProp/blob/main/ETL%201/uk_property_data_etl.py#L179). 
 More on Composite Transform [here](https://www.linkedin.com/feed/update/urn:li:activity:7074415159854669824/) and [here](https://beam.apache.org/documentation/programming-guide/#composite-transforms). 
 
-<!--  ### Update 2 -->
+### [ETL 1 for Dataflow:  Update 2] (https://github.com/BVK23/Beam_ETL_UKProp/blob/main/ETL%201/ETL_1_Dataflow_job.py)
+1. Firestore is used instead of a dictionary and pickle file to store the Property ID generator.
+2. Use of Pipeline options to run Dataflow job
+3. setup() method used inside ParDo transform to initiate Firestore client
 
 
