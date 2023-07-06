@@ -14,7 +14,7 @@ Link to Building a Scalable Big Data ETL Pipeline I [Medium Article](https://med
 
 ## [ETL 2](https://github.com/BVK23/Beam_ETL_UKProp/tree/main/ETL%202)
 
-ETL 2 represtation: ![GIF](https://github.com/BVK23/Beam_ETL_UKProp/blob/main/ETL%202/ETL2_gif.gif)
+ETL 2 represtation: ![GIF](https://github.com/BVK23/Beam_ETL_UKProp/blob/main/ETL%202/ETL2.gif)
 
 Pipeline to ingest new [monthly data](https://www.gov.uk/government/statistical-data-sets/price-paid-data-downloads#april-2023-data-current-month)
 
